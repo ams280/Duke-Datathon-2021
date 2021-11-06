@@ -1,0 +1,24 @@
+---
+title: "Duke Datathon 2021"
+name: "Ashley SHaaf and Danielle Mensah"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r import_data}
+
+library(foreign)
+library(tidyverse)
+library(dplyr)
+library(inspectdf)
+library(haven)
+
+Taiwan <- read_sav("Taiwan v4.2.sav")
+China <- read_sav("Mainland v4.2.sav")
+
+```
+
