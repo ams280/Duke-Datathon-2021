@@ -1,6 +1,6 @@
 ---
 title: "Duke Datathon 2021"
-name: "Ashley SHaaf and Danielle Mensah"
+name: "Ashley Shaaf and Danielle Mensah"
 output: pdf_document
 ---
 
@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-```{r import_data}
+```{r import data}
 
 library(foreign)
 library(tidyverse)
@@ -19,6 +19,15 @@ library(haven)
 
 Taiwan <- read_sav("Taiwan v4.2.sav")
 China <- read_sav("Mainland v4.2.sav")
+Mongolia <- read_sav("Mongolia v4.2.sav")
+Thailand <- read_sav("Thailand v4.2.sav")
+Philippines <- read_sav("Philippines v4.2.sav")
+Korea <- read_sav("Korea v4.2.sav")
+Hong_Kong <- read_sav("Hong Kong v4.2.sav")
+Japan <- read_sav("Japan v4.2.sav")
 
+imp_vars <- read.csv(file = "~/R/Dathon2021/D2-ABS1+2.csv")
+important_variables <- append(imp_vars)
+variables <- as.data.frame(t(database[,colnames(database) %in% important_variables]))
 ```
 
